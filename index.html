@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugarpop Diner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/cupcake.png" type="image/png">
+
+    <style>
+        body {
+            background-color: #cce6f6;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent 0, transparent 50px, rgba(0,0,0,0.05) 50px, rgba(0,0,0,0.05) 100px),
+                repeating-linear-gradient(90deg, #cce6f6 0, #cce6f6 100px, #a8d8f0 100px, #a8d8f0 200px);
+            background-size: 200px 100px;
+            font-family: 'Fredoka', cursive;
+        }
+
+        .font-header {
+            font-weight: 700;
+            color: #d44482;
+        }
+        .font-subheader {
+            font-weight: 400;
+            font-size: 1.25rem;
+            color: #d44482;
+        }
+        .font-body {
+            font-weight: 400;
+            color: #ffffff;
+        }
+        .bubble-box {
+            background-color: #fddde6;
+            border: 3px dashed #d44482;
+            border-radius: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+    <body class="font-body bg-pink-50">
+        <!-- navbar -->
+        <nav class="fixed top-0 left-0 w-full z-50 bg-pink-200 shadow-lg py-4 px-8 flex justify-between items-center rounded-b-3xl border-b-4 border-pink-300">
+            <a href="index.html" class="flex items-center ml-[10%]">
+                <img src="img/sugarpop-logo.png" alt="SugarPop Café Logo" class="h-12 mr-3 drop-shadow-md">
+            </a>
+            <ul class="flex mr-[10%] space-x-8 text-pink-900 font-header text-lg">
+                <li><a href="#about" class="hover:text-white hover:bg-pink-400 px-3 py-1 rounded-lg transition">About</a></li>
+                <li><a href="#menu" class="hover:text-white hover:bg-pink-400 px-3 py-1 rounded-lg transition">Menu</a></li>
+                <li><a href="#order" class="hover:text-white hover:bg-pink-400 px-3 py-1 rounded-lg transition">Order</a></li>
+                <li><a href="#visit" class="hover:text-white hover:bg-pink-400 px-3 py-1 rounded-lg transition">Contact Us</a></li>
+            </ul>
+        </nav>
+
+
+    <!-- home -->
+    <section class="relative bg-cover bg-center" style="background-color: #cce6f6; background-image: 
+        repeating-linear-gradient(0deg, transparent 0, transparent 50px, rgba(0,0,0,0.05) 50px, rgba(0,0,0,0.05) 100px),
+        repeating-linear-gradient(90deg, #cce6f6 0, #cce6f6 100px, #a8d8f0 100px, #a8d8f0 200px); background-size: 200px 100px;">
+
+        <div class="flex flex-col md:flex-row items-center justify-between px-[10%] pt-[10vh] pb-[15vh]">
+            <div class="mb-10 md:mb-0 md:w-1/2">
+                <h1 class="text-5xl md:text-6xl font-header text-pink-600 mb-4">Sweeten Your Day at SugarPop Diner!</h1>
+                <p class="text-lg text-pink-700 mb-6">Delightful cupcakes, cozy vibes, and love in every bite.</p>
+                <a href="#menu" class="bg-pink-400 hover:bg-pink-500 text-white px-6 py-3 rounded-full text-lg font-header shadow-md transition">
+                    Order Now
+                </a>
+            </div>
+
+            <div class="md:w-1/2 flex justify-center">
+                <img src="img/cupcake-hero.png" alt="Cupcake Hero" class="max-w-full h-auto mt-8">
+            </div>
+        </div>
+
+        <!-- border -->
+        <div class="absolute bottom-[-2vh] left-0 w-full overflow-hidden leading-[0]">
+            <svg class="relative block w-full h-20" viewBox="0 0 1200 100" preserveAspectRatio="none">
+                <path d="M0,50 
+                    C37.5,100 75,0 112.5,50 
+                    C150,100 187.5,0 225,50 
+                    C262.5,100 300,0 337.5,50 
+                    C375,100 412.5,0 450,50 
+                    C487.5,100 525,0 562.5,50 
+                    C600,100 637.5,0 675,50 
+                    C712.5,100 750,0 787.5,50 
+                    C825,100 862.5,0 900,50 
+                    C937.5,100 975,0 1012.5,50 
+                    C1050,100 1087.5,0 1125,50 
+                    C1162.5,100 1200,0 1237.5,50 
+                    L1200,100 L0,100 Z" 
+                    fill="#ffffff"/>
+                
+                <path d="M0,50 
+                    C37.5,100 75,0 112.5,50 
+                    C150,100 187.5,0 225,50 
+                    C262.5,100 300,0 337.5,50 
+                    C375,100 412.5,0 450,50 
+                    C487.5,100 525,0 562.5,50 
+                    C600,100 637.5,0 675,50 
+                    C712.5,100 750,0 787.5,50 
+                    C825,100 862.5,0 900,50 
+                    C937.5,100 975,0 1012.5,50 
+                    C1050,100 1087.5,0 1125,50 
+                    C1162.5,100 1200,0 1237.5,50"
+                    fill="none"
+                    stroke="#a8d8f0"
+                    stroke-width="3"
+                    stroke-dasharray="10,8"
+                    stroke-linecap="round"
+                />
+            </svg>
+        </div>
+    </section>
+
+    <div class="w-full bg-white -mt-1 relative z-10">
+    </div>
+
+    <!-- about section -->
+    <section id="about" section class="relative py-20 px-[10%] flex justify-center bg-white">
+        <!-- background -->
+        <div class="absolute inset-0 bg-repeat bg-center opacity-20" style="background-image: url('img/bgwater.png'); z-index: 0;"></div>
+
+        <!-- main -->
+        <div class="relative z-10 bubble-box bg-pink-50 rounded-3xl shadow-xl p-10 max-w-6xl w-full text-center">
+            <h2 class="text-4xl md:text-5xl font-header text-pink-600 mb-6">Welcome to SugarPop Diner!</h2>
+            <p class="text-gray-600 text-lg mb-4">
+                Where sweet dreams become delicious realities. Here's why SugarPop stands out in every delightful bite:
+            </p>
+            <p class="text-gray-600 text-lg mb-12">
+                At SugarPop, we believe that desserts aren’t just treats — they’re moments of joy, celebration, and comfort. That’s why we craft every cupcake with heart, flavor, and a sprinkle of magic.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12 text-left">
+                <div class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+                    <img src="img/quality.png" alt="Star Icon" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-header text-pink-500 mb-2 text-center">What Sets Us Apart</h3>
+                    <p class="text-gray-700">We blend creativity, quality, and love in every pastry. From our unique cupcake flavors to our cozy atmosphere — every visit is a memory in the making.</p>
+                </div>
+
+                <div class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+                    <img src="img/cupcake.png" alt="Cupcake Icon" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-header text-pink-500 mb-2 text-center">Bestsellers</h3>
+                    <p class="text-gray-700">Our top flavors? The Choco Loco, Strawberry Shortcake, and our signature Peanut Butter cupcakes — fan favorites for a reason!</p>
+                </div>
+
+                <div class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+                    <img src="img/book.png" alt="History Icon" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-header text-pink-500 mb-2 text-center">Our Sweet Story</h3>
+                    <p class="text-gray-700">Founded in 2020 by a pastry-loving dreamer, SugarPop started as a humble kitchen passion. Today, it's a cherished community spot for all things sweet.</p>
+                </div>
+
+                <div class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+                    <img src="img/whisk.png" alt="Ingredients Icon" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-xl font-header text-pink-500 mb-2 text-center">Fresh Ingredients</h3>
+                    <p class="text-gray-700">We use only the freshest locally-sourced ingredients, ensuring every bite is as wholesome as it is delicious.</p>
+                </div>
+            </div>
+
+            <div class="w-32 h-1 mx-auto my-8 bg-pink-300 rounded-full animate-pulse"></div>
+
+            <!-- our story -->
+            <div id="story" class="text-left px-4 sm:px-10">
+                <h2 class="text-3xl sm:text-4xl font-header text-pink-600 mb-4 text-center">Our Story</h2>
+                <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                    <span class="font-semibold text-pink-500">SugarPop Café</span> began with a single dream and a whole lot of buttercream. What started as a tiny home kitchen operation grew into a cozy neighborhood spot where people come not just for cupcakes—but for a little joy in every bite.
+                </p>
+                <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                    The name <span class="italic text-pink-400">"SugarPop"</span> was inspired by our founder’s childhood nickname, given by her grandmother who always said she was “as sweet and bubbly as a sugar pop.” That spark of sweetness and fun became the heart of our café.
+                </p>
+                <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                    Every cupcake is a tribute to that warmth—handcrafted with love, laughter, and just a hint of magic. With every swirl of frosting, we aim to capture a little moment of joy — whether it's for a birthday, a breakup, or just because.
+                </p>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Today, we continue to mix nostalgia with creativity, crafting flavors that surprise and comfort, all while staying true to our roots: homemade happiness, shared one cupcake at a time.
+                </p>
+            </div>
+
+            <!-- timeline -->
+            <div class="mb-12 mt-16 text-center">
+                <div class="flex justify-center mb-8">
+                    <img src="img/cupcakebg.jpg" alt="SugarPop Cupcake Journey" class="rounded-2xl shadow-md w-full max-w-md object-cover">
+                </div>
+
+                <h3 class="text-2xl font-header text-pink-500 mb-4">A Timeline of Sweet Success</h3>
+                <ul class="list-disc list-inside text-gray-700 max-w-2xl mx-auto text-left space-y-2">
+                    <li><strong>2020:</strong> SugarPop was born from a late-night cupcake idea.</li>
+                    <li><strong>2021:</strong> Opened our first stall at the weekend market.</li>
+                    <li><strong>2022:</strong> Launched our full dine-in bakery café.</li>
+                    <li><strong>2023:</strong> Became a local favorite with over 9 signature flavors.</li>
+                    <li><strong>2024:</strong> Introduced nationwide delivery — spreading joy, one cupcake at a time!</li>
+                </ul>
+            </div>
+
+            <!-- fun fact -->
+            <div class="bg-pink-100 p-6 rounded-2xl shadow-inner mb-12 max-w-3xl mx-auto">
+                <h3 class="text-xl font-header text-pink-500 mb-2">Did You Know?</h3>
+                <p class="text-gray-700">Our cupcakes have been featured in 3 local food blogs — and one even made it into a surprise wedding proposal!</p>
+            </div>
+
+            <!-- customer -->
+            <div class="italic text-pink-600 text-xl my-12">
+                “Every time I visit SugarPop, it feels like a warm hug in cupcake form.” — A happy regular
+            </div>
+
+            <!-- button -->
+            <a href="#menu" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg font-header shadow-md transition">
+                Discover Our Menu
+            </a>
+        </div>
+    </section>
+
+    <!-- menu section -->
+    <section id="menu" class="relative py-24 px-[10%] bg-cover bg-center" style="background-image: 
+        repeating-linear-gradient(0deg, transparent 0, transparent 50px, rgba(0,0,0,0.05) 50px, rgba(0,0,0,0.05) 100px),
+        repeating-linear-gradient(90deg, #cce6f6 0, #cce6f6 100px, #a8d8f0 100px, #a8d8f0 200px); background-size: 200px 100px;">
+
+        <!-- top dash -->
+        <div class="absolute top-0 left-0 w-full z-20">
+            <svg class="block w-full h-2" viewBox="0 0 1200 10" preserveAspectRatio="none">
+                <line x1="0" y1="5" x2="1200" y2="5" stroke="#9FCDE4" stroke-width="4" stroke-dasharray="12,8" stroke-linecap="round" />
+            </svg>
+        </div>
+
+        <!-- bottom dash -->
+        <div class="absolute bottom-0 left-0 w-full z-20">
+            <svg class="block w-full h-2" viewBox="0 0 1200 10" preserveAspectRatio="none">
+                <line x1="0" y1="5" x2="1200" y2="5" stroke="#a8d8f0" stroke-width="4" stroke-dasharray="12,8" stroke-linecap="round" />
+            </svg>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-5xl font-header text-pink-600 mb-4">Our Sweet Creations</h2>
+                <p class="text-gray-700 text-lg mb-12">Bite-sized magic in every flavor. Explore our handcrafted cupcake collection below!</p>
+            </div>
+
+            <!-- menu items -->
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bubble-box bg-white rounded-3xl shadow-xl p-10 text-center border-2 border-pink-200 transition-transform transform hover:-translate-y-1 hover:shadow-inner hover:shadow-pink-200">
+                    <img src="img/berry.png" alt="Berry Bliss" class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-pink-300 shadow-md">
+                    <h3 class="text-2xl font-header text-pink-600 mb-2">Berry Bliss</h3>
+                    <p class="text-pink-500 font-semibold mb-2">₱120</p>
+                    <p class="text-gray-600">Bursting with fresh berry flavor, this cupcake is a fruity dream come true. Soft sponge and a swirl of berry frosting will have you hooked.</p>
+                </div>
+
+                <div class="relative z-10 bubble-box bg-white rounded-3xl shadow-xl p-10 text-center border-2 border-pink-200 transition-transform transform hover:-translate-y-1 hover:shadow-inner hover:shadow-pink-200">
+                    <img src="img/choco-loco.png" alt="Choco Loco" class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-pink-300 shadow-md">
+                    <h3 class="text-2xl font-header text-pink-600 mb-2">Choco Loco</h3>
+                    <p class="text-pink-500 font-semibold mb-2">₱130</p>
+                    <p class="text-gray-600">Made for true chocoholics, this cupcake is decadence in every bite. Rich chocolate cake meets smooth, indulgent ganache.</p>
+                </div>
+
+                <div class="relative z-10 bubble-box bg-white rounded-3xl shadow-xl p-10 text-center border-2 border-pink-200 transition-transform transform hover:-translate-y-1 hover:shadow-inner hover:shadow-pink-200">
+                    <img src="img/caramel.png" alt="Caramel Crunch" class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-pink-300 shadow-md">
+                    <h3 class="text-2xl font-header text-pink-600 mb-2">Caramel Crunch</h3>
+                    <p class="text-pink-500 font-semibold mb-2">₱125</p>
+                    <p class="text-gray-600">Golden caramel drizzle and crunchy bits top this buttery delight. Sweet and satisfying, it's a bite of caramel heaven.</p>
+                </div>
+
+                <div class="relative z-10 bubble-box bg-white rounded-3xl shadow-xl p-10 text-center border-2 border-pink-200 transition-transform transform hover:-translate-y-1 hover:shadow-inner hover:shadow-pink-200">
+                    <img src="img/strawberry-shortcake.png" alt="Strawberry Shortcake" class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-pink-300 shadow-md">
+                    <h3 class="text-2xl font-header text-pink-600 mb-2">Strawberry Shortcake</h3>
+                    <p class="text-pink-500 font-semibold mb-2">₱115</p>
+                    <p class="text-gray-600">Fluffy cake meets fresh strawberries and whipped cream. It’s classic, light, and totally irresistible.</p>
+                </div>
+
+                <div class="relative z-10 bubble-box bg-white rounded-3xl shadow-xl p-10 text-center border-2 border-pink-200 transition-transform transform hover:-translate-y-1 hover:shadow-inner hover:shadow-pink-200">
+                    <img src="img/cookies.png" alt="Cookies & Cream" class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-pink-300 shadow-md">
+                    <h3 class="text-2xl font-header text-pink-600 mb-2">Cookies & Cream</h3>
+                    <p class="text-pink-500 font-semibold mb-2">₱110</p>
+                    <p class="text-gray-600">Oreo crumbles in every layer make this a cookie-lover’s dream. Creamy frosting and crunch create the perfect combo.</p>
+                </div>
+
+                <div class="relative z-10 bubble-box bg-white rounded-3xl shadow-xl p-10 text-center border-2 border-pink-200 transition-transform transform hover:-translate-y-1 hover:shadow-inner hover:shadow-pink-200">
+                    <img src="img/red-velvet.png" alt="Red Velvet" class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-pink-300 shadow-md">
+                    <h3 class="text-2xl font-header text-pink-600 mb-2">Red Velvet</h3>
+                    <p class="text-pink-500 font-semibold mb-2">₱130</p>
+                    <p class="text-gray-600">Lush red cake and cream cheese frosting make a luxurious pair. Elegant and rich with just the right sweetness.</p>
+                </div>
+
+                <div class="relative z-10 bubble-box bg-white rounded-3xl shadow-xl p-10 text-center border-2 border-pink-200 transition-transform transform hover:-translate-y-1 hover:shadow-inner hover:shadow-pink-200">
+                    <img src="img/lemon-meringue.png" alt="Lemon Meringue" class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-pink-300 shadow-md">
+                    <h3 class="text-2xl font-header text-pink-600 mb-2">Lemon Meringue</h3>
+                    <p class="text-pink-500 font-semibold mb-2">₱120</p>
+                    <p class="text-gray-600">Zesty lemon curd and a fluffy meringue crown this tangy delight. Bright, citrusy, and refreshingly sweet.</p>
+                </div>
+
+                <div class="relative z-10 bubble-box bg-white rounded-3xl shadow-xl p-10 text-center border-2 border-pink-200 transition-transform transform hover:-translate-y-1 hover:shadow-inner hover:shadow-pink-200">
+                    <img src="img/matcha.png" alt="Matcha" class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-pink-300 shadow-md">
+                    <h3 class="text-2xl font-header text-pink-600 mb-2">Matcha</h3>
+                    <p class="text-pink-500 font-semibold mb-2">₱135</p>
+                    <p class="text-gray-600">Earthy green tea flavor meets creamy vanilla in this balanced treat. Sophisticated, smooth, and lightly sweet.</p>
+                </div>
+
+                <div class="relative z-10 bubble-box bg-white rounded-3xl shadow-xl p-10 text-center border-2 border-pink-200 transition-transform transform hover:-translate-y-1 hover:shadow-inner hover:shadow-pink-200">
+                    <img src="img/peanut.png" alt="Peanut Butter" class="w-24 h-24 mx-auto mb-4 rounded-full border-4 border-pink-300 shadow-md">
+                    <h3 class="text-2xl font-header text-pink-600 mb-2">Peanut Butter</h3>
+                    <p class="text-pink-500 font-semibold mb-2">₱125</p>
+                    <p class="text-gray-600">Creamy peanut butter swirls through a rich, nutty cupcake base. It's comforting, bold, and packed with flavor..</p>
+                </div>
+            </div>
+
+            <!-- button -->
+            <div class="mt-16 flex justify-center">
+                <a href="#order" class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-4 rounded-full text-lg font-header shadow-md transition">
+                    Order Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- order section -->
+    <section id="order" class="relative py-20 px-[10%] flex justify-center bg-white">
+        <!-- Background image -->
+        <div class="absolute inset-0 bg-repeat bg-center opacity-20" style="background-image: url('img/bgwater.png'); z-index: 0;"></div>
+
+        <!-- main -->
+        <div class="relative z-10 bubble-box bg-pink-50 rounded-3xl shadow-xl p-10 max-w-4xl w-full text-center">
+            <h2 class="text-4xl md:text-5xl font-header text-pink-600 mb-6">Place Your Order</h2>
+            <p class="text-gray-600 text-lg mb-8">
+                Craving something sweet? Fill out the form below and we’ll whip up your order with extra love!
+            </p>
+
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <div class="flex flex-col">
+                    <label class="text-pink-500 font-semibold mb-1" for="name">Name</label>
+                    <input type="text" id="name" name="name" class="rounded-xl p-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300" placeholder="Your full name" required>
+                </div>
+
+                <div class="flex flex-col">
+                    <label class="text-pink-500 font-semibold mb-1" for="contact">Contact Number</label>
+                    <input type="tel" id="contact" name="contact" class="rounded-xl p-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300" placeholder="09xx xxx xxxx" required>
+                </div>
+
+                <div class="flex flex-col md:col-span-2">
+                    <label class="text-pink-500 font-semibold mb-1" for="flavor">Choose Your Flavor</label>
+                    <select id="flavor" name="flavor" class="rounded-xl p-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300" required>
+                        <option disabled selected>Select a cupcake flavor</option>
+                        <option>Choco Loco</option>
+                        <option>Strawberry Shortcake</option>
+                        <option>Peanut Butter Bliss</option>
+                        <option>Matcha Magic</option>
+                        <option>Caramel Crunch</option>
+                    </select>
+                </div>
+
+                <div class="flex flex-col">
+                    <label class="text-pink-500 font-semibold mb-1" for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" class="rounded-xl p-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300" required>
+                </div>
+
+                <div class="flex flex-col">
+                    <label class="text-pink-500 font-semibold mb-1" for="date">Date Needed</label>
+                    <input type="date" id="date" name="date" class="rounded-xl p-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300" required>
+                </div>
+
+                <div class="flex flex-col md:col-span-2">
+                    <label class="text-pink-500 font-semibold mb-1" for="message">Special Instructions</label>
+                    <textarea id="message" name="message" rows="4" class="rounded-xl p-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300" placeholder="Allergies, custom designs, etc."></textarea>
+                </div>
+
+                <div class="md:col-span-2 flex justify-center mt-4">
+                    <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full text-lg font-header shadow-md transition">
+                        Submit Order
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- contact/visit section -->
+    <section id="visit" class="relative py-24 px-[10%] bg-cover bg-center" style="background-image: 
+        repeating-linear-gradient(0deg, transparent 0, transparent 50px, rgba(0,0,0,0.05) 50px, rgba(0,0,0,0.05) 100px),
+        repeating-linear-gradient(90deg, #cce6f6 0, #cce6f6 100px, #a8d8f0 100px, #a8d8f0 200px); background-size: 200px 100px;">
+
+        <!-- top dash -->
+        <div class="absolute top-0 left-0 w-full z-20">
+            <svg class="block w-full h-2" viewBox="0 0 1200 10" preserveAspectRatio="none">
+                <line x1="0" y1="5" x2="1200" y2="5" stroke="#9FCDE4" stroke-width="4" stroke-dasharray="12,8" stroke-linecap="round" />
+            </svg>
+        </div>
+
+        <!-- bottom dash -->
+        <div class="absolute bottom-0 left-0 w-full z-20">
+            <svg class="block w-full h-2" viewBox="0 0 1200 10" preserveAspectRatio="none">
+                <line x1="0" y1="5" x2="1200" y2="5" stroke="#a8d8f0" stroke-width="4" stroke-dasharray="12,8" stroke-linecap="round" />
+            </svg>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row gap-10 items-center">
+
+            <div class="md:w-1/2 space-y-6 text-center md:text-left">
+                <!-- Replace src with your stock photo -->
+                <img src="img/sugarpop-exterior.png" alt="Our Shop" class="rounded-3xl shadow-lg border-4 border-pink-200 mx-auto md:mx-0 w-full h-auto max-h-[400px] object-cover" />
+
+                <div class="bg-white backdrop-blur-lg p-6 rounded-2xl shadow-md border-2 border-pink-100">
+                    <h3 class="text-2xl font-header text-pink-600 mb-2">Visit Us</h3>
+                    <p class="text-gray-700">123 Cupcake Lane<br>Sugarville, PH 1234</p>
+                    <p class="text-gray-700 mt-2">📅 Open: Mon–Sat<br>⏰ Hours: 10AM–7PM</p>
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.019810506243!2d121.0190564153619!3d14.564389889829025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c91a14c2b83f%3A0xf46e1d71c4f4a254!2sCupcake%20Bakeshop!5e0!3m2!1sen!2sph!4v1640000000000!5m2!1sen!2sph" 
+                      class="mt-4 w-full h-40 rounded-xl border-2 border-pink-100" 
+                      allowfullscreen="" 
+                      loading="lazy">
+                    </iframe>
+
+                </div>
+            </div>
+
+            <!-- contact form -->
+            <div class="md:w-1/2 bubble-box bg-white rounded-3xl shadow-xl p-10 border-2 border-pink-200">
+                <h2 class="text-4xl font-header text-pink-600 mb-4">Let’s Get in Touch!</h2>
+                <p class="text-gray-700 text-base mb-6">Got a question, request, or sweet thought? We’re just a message away!</p>
+                
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-left font-header text-pink-500 mb-1">Your Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-xl border-2 border-pink-100 focus:outline-none focus:ring-2 focus:ring-pink-300" placeholder="Cupcake Lover">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-left font-header text-pink-500 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-xl border-2 border-pink-100 focus:outline-none focus:ring-2 focus:ring-pink-300" placeholder="you@example.com">
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-left font-header text-pink-500 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-xl border-2 border-pink-100 focus:outline-none focus:ring-2 focus:ring-pink-300" placeholder="What’s on your mind?"></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full text-lg font-header shadow-md transition">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-pink-200 border-t-4 border-pink-300 rounded-t-3xl py-8 shadow-inner font-header text-pink-900">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8 px-6">
+        
+        <div class="flex items-center space-x-3">
+          <img src="img/sugarpop-logo.png" alt="SugarPop Café Logo" class="h-10 drop-shadow-md">
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-1">Visit Us</h4>
+          <p>123 Cupcake Lane<br>Sweetville, PH 1234</p>
+          <p class="mt-1">Mon–Sat · 10AM–7PM</p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-1">Thank You</h4>
+          <p>We’re glad you dropped by 🍓<br>Hope to see you again soon!</p>
+        </div>
+      </div>
+
+      <div class="mt-6 border-t border-pink-300 pt-4 text-center text-sm text-pink-800">
+        &copy; 2025 SugarPop Café. All rights reserved.
+      </div>
+    </footer>
+</body>
+</html>
